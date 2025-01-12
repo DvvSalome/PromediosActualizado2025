@@ -1,0 +1,276 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodo Cientifico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+
+      .botonsito {
+            display: flex;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .box-of-star1, .box-of-star2, .box-of-star3, .box-of-star4 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 6px white;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .star-position1 { top: 10%; left: 20%; }
+        .star-position2 { top: 30%; left: 40%; }
+        .star-position3 { top: 50%; left: 60%; }
+        .star-position4 { top: 70%; left: 80%; }
+        .star-position5 { top: 90%; left: 20%; }
+        .star-position6 { top: 20%; left: 70%; }
+        .star-position7 { top: 40%; left: 90%; }
+
+        .astronaut {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            width: 100px;
+            height: 200px;
+            background: white;
+            border-radius: 50%;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-20px);
+            }
+        }
+
+        .astronaut .head, .astronaut .body, .astronaut .arm, .astronaut .leg, .astronaut .schoolbag {
+            position: absolute;
+            background: white;
+        }
+
+        .astronaut .head {
+            top: 10%;
+            left: 25%;
+            width: 50%;
+            height: 20%;
+            border-radius: 50%;
+        }
+
+        .astronaut .body {
+            top: 30%;
+            left: 20%;
+            width: 60%;
+            height: 50%;
+            border-radius: 20%;
+        }
+
+        .astronaut .arm {
+            top: 30%;
+            width: 20%;
+            height: 40%;
+        }
+
+        .astronaut .arm-left {
+            left: 0;
+        }
+
+        .astronaut .arm-right {
+            right: 0;
+        }
+
+        .astronaut .leg {
+            bottom: 0;
+            width: 20%;
+            height: 40%;
+        }
+
+        .astronaut .leg-left {
+            left: 20%;
+        }
+
+        .astronaut .leg-right {
+            right: 20%;
+        }
+
+        .astronaut .schoolbag {
+            top: 30%;
+            left: 10%;
+            width: 80%;
+            height: 40%;
+            border-radius: 10%;
+        }
+
+        .astronaut .panel {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            background: gray;
+            border-radius: 10%;
+        }
+    </style>
+    <script>
+        function CalcularPromedio() {
+            // Paso 1: variables de los porcentajes
+            const Procedimental = 3;
+            const OtrasEvaluaciones = 2;
+            const EvaluacionPeriodo = 4;
+            const Proyecto = 3;
+            const Actitudinal = 1;
+
+            // Paso 2: multiplicar por su porcentaje
+            const ProcedimentalPro = Procedimental * 0.30; 
+            const OtrasEvaluacionesPro = OtrasEvaluaciones * 0.20; 
+            const EvaluacionPeriodoPro = EvaluacionPeriodo * 0.20; 
+            const ProyectoPro = Proyecto * 0.20; 
+            const ActitudinalPro = Actitudinal * 0.10; 
+
+            // Paso 3: ese resultado x nota de la materia
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+            let n3 = parseFloat(document.getElementById("n3").value);
+            let n4 = parseFloat(document.getElementById("n4").value);
+            let n5 = parseFloat(document.getElementById("n5").value);
+
+            // Paso 4: sumar los resultados
+            let ResultadoFinal = ProcedimentalPro + OtrasEvaluacionesPro + EvaluacionPeriodoPro + ProyectoPro + ActitudinalPro;
+
+            // Mostrar el resultado en una ventana emergente estilizada
+            document.getElementById("resultado").innerText = "El promedio de la materia es: " + ResultadoFinal.toFixed(2);
+            document.getElementById("modal").classList.remove("hidden");
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+
+        function regresarPagina() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body class="bg-gray-800 flex items-center justify-center min-h-screen relative">
+    <button onclick="regresarPagina()" class="absolute top-4 left-4 p-2 bg-gray-600 text-white font-bold rounded-lg shadow-lg hover:bg-gray-500 transition duration-300 ease-in-out transform hover:scale-105">REGRESAR</button>
+    <div class="bg-gray-700 bg-opacity-50 p-8 rounded-lg shadow-lg w-full max-w-md fade-in">
+        <h1 class="text-white text-2xl font-bold text-center mb-4 slide-in">Promedio Materia</h1>
+        <p class="text-white text-center mb-6 slide-in">INGRESA LA NOTA DE CADA CAMPO:</p>
+        <form onsubmit="event.preventDefault(); CalcularPromedio();">
+            <input type="text" id="n1" placeholder="Procedimental" class="w-full p-3 mb-4 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <input type="text" id="n2" placeholder="OtrasEvaluaciones" class="w-full p-3 mb-4 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <input type="text" id="n3" placeholder="EvaluacionPeriodo " class="w-full p-3 mb-4 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <input type="text" id="n4" placeholder="Proyecto" class="w-full p-3 mb-4 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <input type="text" id="n5" placeholder="Actitudinal" class="w-full p-3 mb-6 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300 ease-in-out transform hover:scale-105">
+            <button type="submit" class="w-full p-3 bg-white text-gray-900 font-bold rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105">CALCULAR PROMEDIO</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="botonsito hidden fixed inset-0 bg-gray-800 bg-opacity-75  items-center justify-center fade-in">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm slide-in">
+            <h2 class="text-xl font-bold mb-4 text-center">Resultado</h2>
+            <p id="resultado" class="mb-4 text-center"></p>
+            <button onclick="cerrarModal()" class="w-full p-3 bg-gray-800 text-white font-bold rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Astronauta -->
+    <div class="box-of-star1">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star2">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star3">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star4">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div data-js="astro" class="astronaut">
+        <div class="head"></div>
+        <div class="arm arm-left"></div>
+        <div class="arm arm-right"></div>
+        <div class="body">
+            <div class="panel"></div>
+        </div>
+        <div class="leg leg-left"></div>
+        <div class="leg leg-right"></div>
+        <div class="schoolbag"></div>
+    </div>
+</body>
+</html>

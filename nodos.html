@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedios Académicos</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nodos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+    
+</head>
+<body class="flex items-center justify-center min-h-screen bg-opacity-75 parallax">
+    <div class="container mx-auto p-4">
+        <div class="flex justify-between mb-8">
+            <a href="index.html" class="p-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
+            <button id="theme-toggle" class="p-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+        </div>
+        <form id="grades-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300 contenedornodo">
+                    <h1 class="text-2xl font-bold text-center text-white mb-6">NODO CIENTIFICO</h1>
+                    <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
+                    <input type="number" step="0.01" name="Nota1_1" placeholder="Nota Trigonometria" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota2_1" placeholder="Nota Geometria" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota3_1" placeholder="Nota Fisica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota4_1" placeholder="Nota Quimica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota5_1" placeholder="Nota Tecnologia" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                </div>
+                <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
+                    <h1 class="text-2xl font-bold text-center text-white mb-6">NODO COMUNICATIVO</h1>
+                    <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
+                    <input type="number" step="0.01" name="Nota1_2" placeholder="Nota Ingles" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota2_2" placeholder="Nota Castellano" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                </div>
+                <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
+                    <h1 class="text-2xl font-bold text-center text-white mb-6">NODO FORMACION HUMANA</h1>
+                    <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
+                    <input type="number" step="0.01" name="Nota1_3" placeholder="Nota Religion" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota2_3" placeholder="Nota Sociales" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota3_3" placeholder="Nota Etica" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota4_3" placeholder="Nota Politica" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota5_3" placeholder="Nota Filosofia" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                </div>
+                <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
+                    <h1 class="text-2xl font-bold text-center text-white mb-6">NODO LUDICO CREATIVO</h1>
+                    <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
+                    <input type="number" step="0.01" name="Nota1_4" placeholder="Nota Artistica" class="input_bg w-full p-3 mb-4 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota2_4" placeholder="Nota Fisica" class="input_bg w-full p-3 mb-4 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                </div>
+            </div>
+            <div class="flex justify-center mt-8">
+                <button type="submit" class="p-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">CALCULAR PROMEDIO</button>
+            </div>
+        </form>
+        <table class="mt-8 w-full bg-white rounded-lg shadow-2d">
+            <thead>
+                <tr>
+                    <th class="p-3 border-b">Nombre Nodo</th>
+                    <th class="p-3 border-b">Materia 1</th>
+                    <th class="p-3 border-b">Materia 2</th>
+                    <th class="p-3 border-b">Materia 3</th>
+                    <th class="p-3 border-b">Materia 4</th>
+                    <th class="p-3 border-b">Materia 5</th>
+                    <th class="p-3 border-b">Promedio</th>
+                    <th class="p-3 border-b">Desempeño</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.getElementById('grades-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const resultsBody = document.getElementById('results-body');
+            resultsBody.innerHTML = '';
+
+            const nodes = [
+                {
+                    name: 'NODO CIENTIFICO',
+                    subjects: [
+                        { name: 'Calculo', intensity: 2, grade: formData.get('Nota1_1') },
+                        { name: 'Estadistica', intensity: 2, grade: formData.get('Nota2_1') },
+                        { name: 'Fisica', intensity: 3, grade: formData.get('Nota3_1') },
+                        { name: 'Quimica', intensity: 4, grade: formData.get('Nota4_1') },
+                        { name: 'Tecnologia', intensity: 1, grade: formData.get('Nota5_1') }
+                    ]
+                },
+                {
+                    name: 'NODO COMUNICATIVO',
+                    subjects: [
+                        { name: 'Ingles', intensity: 3, grade: formData.get('Nota1_2') },
+                        { name: 'Español', intensity: 4, grade: formData.get('Nota2_2') }
+                    ]
+                },
+                {
+                    name: 'NODO FORMACION HUMANA',
+                    subjects: [
+                        { name: 'Religion', intensity: 1, grade: formData.get('Nota1_3') },
+                        { name: 'Sociales', intensity: 1, grade: formData.get('Nota2_3') },
+                        { name: 'Etica', intensity: 1, grade: formData.get('Nota3_3') },
+                        { name: 'Politica', intensity: 2, grade: formData.get('Nota4_3') },
+                        { name: 'Filosofia', intensity: 2, grade: formData.get('Nota5_3') }
+                    ]
+                },
+                {
+                    name: 'NODO LUDICO CREATIVO',
+                    subjects: [
+                        { name: 'Artistica', intensity: 1, grade: formData.get('Nota1_4') },
+                        { name: 'Fisica', intensity: 2, grade: formData.get('Nota2_4') }
+                    ]
+                }
+            ];
+
+            nodes.forEach(node => {
+                const validGrades = node.subjects.filter(subject => subject.grade !== null && subject.grade !== '');
+                if (validGrades.length === node.subjects.length) {
+                    const totalIntensity = node.subjects.reduce((sum, subject) => sum + subject.intensity, 0);
+                    const weightedSum = node.subjects.reduce((sum, subject) => sum + (subject.intensity / totalIntensity) * subject.grade, 0);
+                    const average = weightedSum.toFixed(1);
+                    let performance = '';
+
+                    if (average <= 2.9) {
+                        performance = 'Bajo';
+                    } else if (average <= 3.9) {
+                        performance = 'Básico';
+                    } else if (average <= 4.6) {
+                        performance = 'Alto';
+                    } else if (average <= 5) {
+                        performance = 'Superior';
+                    } else {
+                        performance = 'No es una nota válida';
+                    }
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td class="p-3 border-b">${node.name}</td>
+                        ${node.subjects.map(subject => `<td class="p-3 border-b">${subject.grade}</td>`).join('')}
+                        ${Array(5 - node.subjects.length).fill('<td class="p-3 border-b">-</td>').join('')}
+                        <td class="p-3 border-b">${average}</td>
+                        <td class="p-3 border-b">${performance}</td>
+                    `;
+                    resultsBody.appendChild(row);
+                }
+            });
+        });
+    </script>
+</body>
+
+
+   
+
+
+</body>
+<script src="js/script.js"></script>
+</html>

@@ -1,0 +1,62 @@
+html, body {
+    background-image: url('../src/ui.gif'); /* Ajusta la ruta según la ubicación de tu imagen */
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #1a202c; /* Color de fondo oscuro */
+    color: #cbd5e0; /* Color de texto claro */
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+.input-focus:focus {
+    background-color: #4a5568;
+}
+
+.shadow-2d {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.contenedornodo {
+    background: rgba(187, 184, 184, 0.26);
+    box-shadow: 0 0 10px rgb(236, 233, 233);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input_bg {
+    background: rgba(166, 163, 163, 0.628);
+}
+
+.input_bg::placeholder {
+    color: rgb(255, 255, 255);
+}
