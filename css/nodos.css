@@ -32,7 +32,7 @@ body.dark {
 }
 
 .shadow-2d {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px rgb(255, 254, 254), 0 6px 20px rgba(255, 255, 255, 0.452);
 }
 
 .background-image {
@@ -54,13 +54,16 @@ body.dark {
 }
 
 .input_bg {
-    background: rgba(166, 163, 163, 0.628);
+    background: rgba(91, 90, 90, 0.411);
 }
 
 .input_bg::placeholder {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 250, 250);
 }
 
+.modalcito {
+   display: flex;
+}
 .table-responsive {
     overflow-x: auto; /* Permite el desplazamiento horizontal */
     -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos táctiles */

@@ -3,55 +3,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promedios Académicos</title>
-    <link href="src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/input.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/nodos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   
-    
 </head>
-<body class="flex items-center justify-center min-h-screen bg-opacity-75 parallax">
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="container mx-auto p-4">
         <div class="flex justify-between mb-8">
             <a href="index.html" class="p-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
                 <i class="fas fa-arrow-left"></i> Volver
             </a>
-            <!-- <button id="theme-toggle" class="p-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
-                <i id="theme-icon" class="fas fa-moon"></i>
-            </button> -->
         </div>
         <form id="grades-form">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300 contenedornodo">
+                <div class="contenedornodo p-8 rounded-lg shadow-lg w-full max-w-md mx-auto  transform hover:scale-105 transition-transform duration-300">
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO CIENTIFICO</h1>
                     <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
-                    <input type="number" step="0.01" name="Nota1_1" placeholder="Nota Calculo" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota2_1" placeholder="Nota Estadistica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota3_1" placeholder="Nota Fisica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota4_1" placeholder="Nota Quimica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota5_1" placeholder="Nota Tecnologia" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota1_1" placeholder="Nota Calculo" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota2_1" placeholder="Nota Estadistica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota3_1" placeholder="Nota Fisica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota4_1" placeholder="Nota Quimica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota5_1" placeholder="Nota Tecnologia" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
                 </div>
-                <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
+                <div class="contenedornodo p-8 rounded-lg shadow-lg w-full max-w-md mx-auto  transform hover:scale-105 transition-transform duration-300">
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO COMUNICATIVO</h1>
                     <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
-                    <input type="number" step="0.01" name="Nota1_2" placeholder="Nota Ingles" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota2_2" placeholder="Nota Español" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota1_2" placeholder="Nota Ingles" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota2_2" placeholder="Nota Español" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
                 </div>
-                <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
+                <div class="contenedornodo p-8 rounded-lg shadow-lg w-full max-w-md mx-auto  transform hover:scale-105 transition-transform duration-300">
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO FORMACION HUMANA</h1>
                     <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
-                    <input type="number" step="0.01" name="Nota1_3" placeholder="Nota Religion" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota2_3" placeholder="Nota Sociales" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota3_3" placeholder="Nota Etica" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota4_3" placeholder="Nota Politica" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota5_3" placeholder="Nota Filosofia" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota1_3" placeholder="Nota Religion" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota2_3" placeholder="Nota Sociales" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota3_3" placeholder="Nota Etica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota4_3" placeholder="Nota Politica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota5_3" placeholder="Nota Filosofia" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
                 </div>
-                <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
+                <div class="contenedornodo p-8 rounded-lg shadow-lg w-full max-w-md mx-auto  transform hover:scale-105 transition-transform duration-300">
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO LUDICO CREATIVO</h1>
                     <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
-                    <input type="number" step="0.01" name="Nota1_4" placeholder="Nota Artistica" class="input_bg w-full p-3 mb-4 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota2_4" placeholder="Nota Fisica" class="input_bg w-full p-3 mb-4 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota1_4" placeholder="Nota Artistica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <input type="number" step="0.01" name="Nota2_4" placeholder="Nota Fisica" class="input_bg w-full p-3 mb-4  rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
                 </div>
             </div>
             <div class="flex justify-center mt-8">
@@ -59,9 +52,16 @@
             </div>
         </form>
 
+        <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+                <h2 class="text-2xl font-bold mb-4">Resultado</h2>
+                <div id="modal-content" class="text-lg"></div>
+                <button id="close-modal" class="mt-4 p-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Cerrar</button>
+            </div>
+        </div>
 
-        <div class="table-responsive">
-            <table class="mt-8 w-full bg-white rounded-lg shadow-2d">
+        <div class="table-responsive hidden md:block">
+            <table class="mt-8 w-full bg-white rounded-lg shadow-lg">
                 <thead>
                     <tr>
                         <th class="p-3 border-b">Nombre Nodo</th>
@@ -78,9 +78,8 @@
                 </tbody>
             </table>
         </div>
-
-
     </div>
+
     <script>
         document.getElementById('grades-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -126,6 +125,7 @@
                 }
             ];
 
+            let modalContent = '';
             nodes.forEach(node => {
                 const validGrades = node.subjects.filter(subject => subject.grade !== null && subject.grade !== '');
                 if (validGrades.length === node.subjects.length) {
@@ -155,16 +155,20 @@
                         <td class="p-3 border-b">${performance}</td>
                     `;
                     resultsBody.appendChild(row);
+
+                    modalContent += `<p>LA NOTA FINAL DEL ${node.name} ES: ${average}</p>`;
                 }
             });
+
+            if (modalContent) {
+                document.getElementById('modal-content').innerHTML = modalContent;
+                document.getElementById('modal').classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('close-modal').addEventListener('click', function() {
+            document.getElementById('modal').classList.add('hidden');
         });
     </script>
 </body>
-
-
-   
-
-
-</body>
-<script src="js/script.js"></script>
 </html>
