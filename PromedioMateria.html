@@ -161,47 +161,35 @@
         }
     </style>
     <script>
-        function CalcularPromedio() {
-            // Paso 1: variables de los porcentajes
-            const Procedimental = 3;
-            const OtrasEvaluaciones = 2;
-            const EvaluacionPeriodo = 4;
-            const Proyecto = 3;
-            const Actitudinal = 1;
+      function CalcularPromedio() {
+    // Paso 1: variables de los porcentajes
+    const Procedimental = 0.30; // 30%
+    const OtrasEvaluaciones = 0.20; // 20%
+    const EvaluacionPeriodo = 0.20; // 20%
+    const Proyecto = 0.20; // 20%
+    const Actitudinal = 0.10; // 10%
 
-            // Paso 2: multiplicar por su porcentaje
-            const ProcedimentalPro = Procedimental * 0.30; 
-            const OtrasEvaluacionesPro = OtrasEvaluaciones * 0.20; 
-            const EvaluacionPeriodoPro = EvaluacionPeriodo * 0.20; 
-            const ProyectoPro = Proyecto * 0.20; 
-            const ActitudinalPro = Actitudinal * 0.10; 
+    // Paso 2: obtener las notas ingresadas
+    let n1 = parseFloat(document.getElementById("n1").value) || 0; // Si no hay valor, usar 0
+    let n2 = parseFloat(document.getElementById("n2").value) || 0;
+    let n3 = parseFloat(document.getElementById("n3").value) || 0;
+    let n4 = parseFloat(document.getElementById("n4").value) || 0;
+    let n5 = parseFloat(document.getElementById("n5").value) || 0;
 
-            // Paso 3: ese resultado x nota de la materia
-            let n1 = parseFloat(document.getElementById("n1").value);
-            let n2 = parseFloat(document.getElementById("n2").value);
-            let n3 = parseFloat(document.getElementById("n3").value);
-            let n4 = parseFloat(document.getElementById("n4").value);
-            let n5 = parseFloat(document.getElementById("n5").value);
+    // Paso 3: calcular el promedio ponderado
+    let ResultadoFinal = (n1 * Procedimental) + (n2 * OtrasEvaluaciones) + (n3 * EvaluacionPeriodo) + (n4 * Proyecto) + (n5 * Actitudinal);
 
-            // Paso 4: sumar los resultados
-            let ResultadoFinal = ProcedimentalPro + OtrasEvaluacionesPro + EvaluacionPeriodoPro + ProyectoPro + ActitudinalPro;
-
-            // Mostrar el resultado en una ventana emergente estilizada
-            document.getElementById("resultado").innerText = "El promedio de la materia es: " + ResultadoFinal.toFixed(2);
-            document.getElementById("modal").classList.remove("hidden");
-        }
-
-        function cerrarModal() {
-            document.getElementById("modal").classList.add("hidden");
-        }
-
-        function regresarPagina() {
-            window.history.back();
-        }
+    // Mostrar el resultado en una ventana emergente estilizada
+    document.getElementById("resultado").innerText = "El promedio de la materia es: " + ResultadoFinal.toFixed(2);
+    document.getElementById("modal").classList.remove("hidden");
+}
+function cerrarModal() {
+    document.getElementById("modal").classList.add("hidden");
+}
     </script>
 </head>
 <body class="bg-gray-800 flex items-center justify-center min-h-screen relative">
-    <button onclick="regresarPagina()" class="absolute top-4 left-4 p-2 bg-gray-600 text-white font-bold rounded-lg shadow-lg hover:bg-gray-500 transition duration-300 ease-in-out transform hover:scale-105">REGRESAR</button>
+    <button onclick="regresarPagina()" class="absolute top-4 left-4 p-2 bg-gray-600 text-white font-bold rounded-lg shadow-lg hover:bg-gray-500 transition duration-300 ease-in-out transform hover:scale-105"><a href="index.html">REGRESAR</a></button>
     <div class="bg-gray-700 bg-opacity-50 p-8 rounded-lg shadow-lg w-full max-w-md fade-in">
         <h1 class="text-white text-2xl font-bold text-center mb-4 slide-in">Promedio Materia</h1>
         <p class="text-white text-center mb-6 slide-in">INGRESA LA NOTA DE CADA CAMPO:</p>

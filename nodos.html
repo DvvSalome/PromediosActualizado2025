@@ -17,17 +17,17 @@
             <a href="index.html" class="p-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
                 <i class="fas fa-arrow-left"></i> Volver
             </a>
-            <button id="theme-toggle" class="p-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            <!-- <button id="theme-toggle" class="p-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">
                 <i id="theme-icon" class="fas fa-moon"></i>
-            </button>
+            </button> -->
         </div>
         <form id="grades-form">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300 contenedornodo">
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO CIENTIFICO</h1>
                     <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
-                    <input type="number" step="0.01" name="Nota1_1" placeholder="Nota Trigonometria" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota2_1" placeholder="Nota Geometria" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota1_1" placeholder="Nota Calculo" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota2_1" placeholder="Nota Estadistica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
                     <input type="number" step="0.01" name="Nota3_1" placeholder="Nota Fisica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
                     <input type="number" step="0.01" name="Nota4_1" placeholder="Nota Quimica" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
                     <input type="number" step="0.01" name="Nota5_1" placeholder="Nota Tecnologia" class="w-full p-3 mb-4 input_bg rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
@@ -36,7 +36,7 @@
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO COMUNICATIVO</h1>
                     <p class="text-center text-white mb-4">INGRESA LA NOTA DE CADA MATERIA:</p>
                     <input type="number" step="0.01" name="Nota1_2" placeholder="Nota Ingles" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
-                    <input type="number" step="0.01" name="Nota2_2" placeholder="Nota Castellano" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
+                    <input type="number" step="0.01" name="Nota2_2" placeholder="Nota Español" class="input_bg w-full p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 input-focus">
                 </div>
                 <div class="contenedornodo bg-opacity-75 p-8 rounded-lg shadow-2d w-full max-w-md mx-auto fade-in transform hover:scale-105 transition-transform duration-300">
                     <h1 class="text-2xl font-bold text-center text-white mb-6">NODO FORMACION HUMANA</h1>
@@ -58,22 +58,28 @@
                 <button type="submit" class="p-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500">CALCULAR PROMEDIO</button>
             </div>
         </form>
-        <table class="mt-8 w-full bg-white rounded-lg shadow-2d">
-            <thead>
-                <tr>
-                    <th class="p-3 border-b">Nombre Nodo</th>
-                    <th class="p-3 border-b">Materia 1</th>
-                    <th class="p-3 border-b">Materia 2</th>
-                    <th class="p-3 border-b">Materia 3</th>
-                    <th class="p-3 border-b">Materia 4</th>
-                    <th class="p-3 border-b">Materia 5</th>
-                    <th class="p-3 border-b">Promedio</th>
-                    <th class="p-3 border-b">Desempeño</th>
-                </tr>
-            </thead>
-            <tbody id="results-body">
-            </tbody>
-        </table>
+
+
+        <div class="table-responsive">
+            <table class="mt-8 w-full bg-white rounded-lg shadow-2d">
+                <thead>
+                    <tr>
+                        <th class="p-3 border-b">Nombre Nodo</th>
+                        <th class="p-3 border-b">Materia 1</th>
+                        <th class="p-3 border-b">Materia 2</th>
+                        <th class="p-3 border-b">Materia 3</th>
+                        <th class="p-3 border-b">Materia 4</th>
+                        <th class="p-3 border-b">Materia 5</th>
+                        <th class="p-3 border-b">Promedio</th>
+                        <th class="p-3 border-b">Desempeño</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                </tbody>
+            </table>
+        </div>
+
+
     </div>
     <script>
         document.getElementById('grades-form').addEventListener('submit', function(event) {

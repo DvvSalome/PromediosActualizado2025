@@ -60,3 +60,30 @@ body.dark {
 .input_bg::placeholder {
     color: rgb(255, 255, 255);
 }
+
+.table-responsive {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos táctiles */
+}
+
+table {
+    width: 100%; /* Asegura que la tabla ocupe el 100% del contenedor */
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+@media (max-width: 768px) {
+    th, td {
+        display: block; /* Hace que las celdas se comporten como bloques */
+        width: 100%; /* Cada celda ocupa el 100% del ancho */
+    }
+
+    tr {
+        margin-bottom: 15px; /* Espacio entre filas */
+        display: block; /* Hace que las filas se comporten como bloques */
+    }
+}
